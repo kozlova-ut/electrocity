@@ -1,0 +1,135 @@
+@import '_variables.scss';
+
+@font-face {
+    font-family: "Roboto-Regular";
+    src: url("fonts/Roboto-Regular.woff2") format("woff2"), url("fonts/Roboto-Regular.woff") format("woff");  
+}
+
+@font-face {
+    font-family: "Roboto-Bold";
+    src: url("fonts/Roboto-Bold.woff2") format("woff2"), url("fonts/Roboto-Bold.woff") format("woff");  
+}
+
+@font-face {
+    font-family: "Rosario-Bold";
+    src: url("fonts/Rosario-Bold.woff2") format("woff2"), url("fonts/Rosario-Bold.woff") format("woff");
+}
+
+@mixin mainText {
+    font-family: 'Roboto-Regular', sans-serif;
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 400;
+    color: $mainText;
+}
+
+@mixin headingText {
+    font-family: 'Roboto-Bold', sans-serif;
+    font-size: 36px;
+    line-height: 42px;
+    font-weight: 700;
+    color: $mainText;    
+}
+
+@mixin logoText {
+    font-family: 'Rosario-Bold', sans-serif;
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: 700;
+    color: $red;
+    text-transform: uppercase;
+    letter-spacing: 0.096em;
+}
+
+@mixin icon {
+    position: relative;
+    padding-left: 24px;
+    @include mainText;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        left: 0;
+        top: 0;
+    }
+}
+
+@mixin bigHeading {
+        margin-bottom: 8px;
+        font-family: 'Roboto-Bold', sans-serif;
+        font-weight: 700;
+        font-size: 21px;
+        line-height: 25px;
+
+        @media (max-width: 1070px) {
+            margin-bottom: 6px;
+            font-size: 14px;
+            line-height: 18px;
+        }  
+        
+        @media (max-width: 768px) {
+            margin-bottom: 8px;
+            font-size: 21px;
+            line-height: 25px;
+        }
+
+        @media (max-width: 700px) {
+            margin-bottom: 6px;
+            font-size: 14px;
+            line-height: 18px;
+        }
+
+        @media (max-width: 486px) {
+            margin-bottom: 8px;
+            font-size: 21px;
+            line-height: 25px;
+        }
+
+        @media (max-width: 330px) {
+            margin-bottom: 6px;
+            font-size: 17px;
+            line-height: 20px;
+        }
+}
+
+@mixin smallerHeading {
+    margin-bottom: 6px;
+    font-family: 'Roboto-Bold', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+@mixin cardDescr {
+    font-family: 'Roboto-Regular', sans-serif;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 13px; 
+
+    @media (max-width: 1070px) {
+        font-size: 9px;
+        line-height: 9px;
+    }  
+    
+    @media (max-width: 768px) {
+        font-size: 11px;
+        line-height: 13px;
+    }
+
+    @media (max-width: 700px) {
+        font-size: 9px;
+        line-height: 9px;
+    }
+
+    @media (max-width: 486px) {
+        font-size: 11px;
+        line-height: 13px;
+    }
+
+    @media (max-width: 330px) {
+        font-size: 9px;
+        line-height: 9px;
+    }
+}
